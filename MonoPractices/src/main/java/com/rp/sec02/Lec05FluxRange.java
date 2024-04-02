@@ -10,8 +10,10 @@ public class Lec05FluxRange {
 //        Flux.range(3, 10)
 //                .subscribe(Util.onNext());
 
-        Flux.range(1, 10)
+        Flux.range(3, 10)
+                .log()
                 .map(i -> Util.faker().name().fullName())
+                .log()
                 .subscribe(Util.onNext());
     }
 }
